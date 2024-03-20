@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  first-container:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "221:8080"
+    volumes:
+      - ./2048-game:/app
+
+  second-container:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "222:8080"
+    volumes:
+      - ./2048-game:/app
